@@ -5,10 +5,72 @@ jQuery(document).ready(function($) {
         console.log($nav.height());
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
+    $(".navbar-collapse").css({ maxHeight: $(window).height() - $(".navbar-header").height() + "px" });
+    $('.navbar-toggle').click(function(event) {
+
+        if ($(this).hasClass('collapsed')) {
+            $(this).addClass('menu-show');
+            $('.navbar').addClass('hover-navbar');
+
+
+        } else {
+            $(this).removeClass('menu-show');
+            $('.navbar').removeClass('hover-navbar');
+
+
+        }
+    });
     var owl = $('#owl1');
+    $('.friend-right-click').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+    $('.friend-left-click').click(function() {
+        owl.trigger('prev.owl.carousel');
+    })
     owl.owlCarousel({
         loop: true,
         margin: 38.25,
+        mouseDrag: false,
+        responsive: {
+            0: {
+                items: 1,
+                pagination: false,
+                margin: 12,
+                stagePadding: 32.5
+            },
+            540: {
+                items: 2,
+                pagination: false
+            },
+            667: {
+                items: 3,
+                pagination: false
+            },
+            768: {
+                items: 2
+            },
+            1024: {
+                items: 3
+            },
+            1300: {
+                items: 4
+            }
+
+
+
+
+        }
+    });
+    var owlPhotos = $('#owl-photos');
+    $('.photo-right-click').click(function() {
+        owlPhotos.trigger('next.owl.carousel');
+    })
+    $('.photo-left-click').click(function() {
+        owlPhotos.trigger('prev.owl.carousel');
+    })
+    owlPhotos.owlCarousel({
+        loop: true,
+        margin: 38.33,
         mouseDrag: false,
         responsive: {
             0: {
