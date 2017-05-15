@@ -1,10 +1,18 @@
 jQuery(document).ready(function($) {
+    
     $(document).scroll(function() {
         var $nav = $(".navbar-fixed-top");
         console.log($(this).scrollTop());
         console.log($nav.height());
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
+
+     $(".scroll").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#scrollTo").offset().top - $(".navbar-fixed-top").height()-56
+        }, 2000);
+    });
+
     $(".navbar-collapse").css({ maxHeight: $(window).height() - $(".navbar-header").height() + "px" });
     $('.navbar-toggle').click(function(event) {
 

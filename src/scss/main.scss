@@ -43,7 +43,7 @@ body.not-index {
         }
     }
     .navbar-brand {
-        background-image: url(../img/logo-scroll.png);
+        background-image: url(../img/logo.svg);
         width: 255px;
         height: 75px;
     }
@@ -57,8 +57,8 @@ header {
         -moz-background-size: cover;
         background-size: cover;
         background-image: url(../img/top-header-bg.png);
-        padding-top: 230px;
-        padding-bottom: 470px;
+        padding-top: 240px;
+        padding-bottom: 456px;
         background-position: center center;
         &:before {
             content: '';
@@ -95,6 +95,48 @@ header {
                     letter-spacing: 1px;
                     height: 50px;
                 }
+                .styled-checkbox {
+                    position: absolute; // take it out of document flow
+                    opacity: 0; // hide it
+                    & + label {
+                        position: relative;
+                        cursor: pointer;
+                        padding: 0;
+                        color: #1d1d1b;
+                        font-family: "Source Sans Pro";
+                        font-size: 14px;
+                        font-weight: 400;
+                        letter-spacing: 1px;
+                        float: left;
+                        line-height: 40px;
+                    }
+                    // Box.
+                    & + label:before {
+                        content: '';
+                        margin-right: 10px;
+                        display: inline-block;
+                        vertical-align: text-top;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 100px;
+                        box-shadow: 0 2px 4px rgba(100, 100, 100, 0.2);
+                        border: 1px solid #95c85d;
+                        background-image: linear-gradient(134deg, #91c831 0%, #429321 100%, #5533ff 100%);
+                    }
+                    // Box checked
+                    // Checkmark. Could be replaced with an image
+                    &:checked + label:after {
+                        content: '';
+                        position: absolute;
+                        left: 5px;
+                        top: 20px;
+                        background: white;
+                        width: 2px;
+                        height: 2px;
+                        box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+                        transform: rotate(45deg);
+                    }
+                }
                 .checkbox-label {
                     color: #1d1d1b;
                     font-family: "Source Sans Pro";
@@ -104,18 +146,47 @@ header {
                     float: left;
                     line-height: 40px;
                     margin-bottom: 0;
-                    // &:before {
-                    //     content: '';
-                    //     width: 20px;
-                    //     height: 20px;
-                    //     box-shadow: 0 2px 4px rgba(100, 100, 100, 0.2);
-                    //     border: 1px solid #95c85d;
-                    //     background-image: linear-gradient(134deg, #91c831 0%, #429321 100%, #5533ff 100%);
-                    // }
+                    position: relative;
+                    &:before {
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        display: inline-block;
+                        border-radius: 100px;
+                        box-shadow: 0 2px 4px rgba(100, 100, 100, 0.2);
+                        border: 1px solid #95c85d;
+                        background-image: linear-gradient(134deg, #91c831 0%, #429321 100%, #5533ff 100%);
+                    }
+                    .control__indicator {
+                        position: absolute;
+                        top: 2px;
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 100px;
+                        box-shadow: 0 2px 4px rgba(100, 100, 100, 0.2);
+                        border: 1px solid #95c85d;
+                        background-image: linear-gradient(134deg, #91c831 0%, #429321 100%, #5533ff 100%);
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            display: none;
+                        }
+                    }
                 }
                 input[type='checkbox'] {
                     vertical-align: middle;
                     margin: 0;
+                    position: absolute;
+                    z-index: -1;
+                    opacity: 0;
+                    visibility: hidden;
+                    &:checked {
+                        .control__indicator {
+                            &:after {
+                                direction: block;
+                            }
+                        }
+                    }
                 }
                 label.login-title {
                     color: #1d1d1b;
@@ -146,12 +217,16 @@ header {
                     border-radius: 3px;
                     border: 1px solid #95c85d;
                     padding: 8px 48px 8px 49px;
-                    background-image: linear-gradient(135deg, #91c831 0%, #429321 100%);
+                    background: linear-gradient(135deg, #91c831 0%, #429321 100%);
                     color: #ffffff;
                     font-family: "Source Sans Pro";
                     font-size: 16px;
                     font-weight: 400;
                     letter-spacing: 1px;
+                    -webkit-transition: background 1s ease-out;
+                    -moz-transition: background 1s ease-out;
+                    -o-transition: background 1s ease-out;
+                    transition: background 1s ease-out;
                     &:after {
                         content: '';
                         background-image: url(../img/arrow-right-l.png);
@@ -159,6 +234,10 @@ header {
                         height: 9px;
                         display: inline-block;
                         margin-left: 15px;
+                    }
+                    &:hover {
+                        background-position: 163px;
+                        
                     }
                 }
                 a.forgot-link {
@@ -176,7 +255,7 @@ header {
                 font-family: 'Montserrat';
                 font-size: 44px;
                 font-weight: 700;
-                letter-spacing: -2.5px;
+                letter-spacing: -2px;
                 line-height: 48px;
                 margin-top: 61px;
                 margin-bottom: 23px;
@@ -223,14 +302,15 @@ header {
         }
         a.scroll {
             position: absolute;
-            bottom: 20px;
-            left: 50%;
+            ;
+            bottom: 35px;
+            left: calc(50% - 11.5px);
         }
     }
 }
 
 .navbar.navbar-index {
-    padding: 29px 0;
+    padding: 40px 0;
     background-color: transparent;
     border: none;
     box-shadow: none;
@@ -249,7 +329,7 @@ header {
         }
     }
     .navbar-brand {
-        background-image: url(../img/logo-plusplaats-white.png);
+        background-image: url(../img/logo_wit.svg);
         width: 255px;
         height: 75px;
         margin-left: 0 !important;
@@ -390,9 +470,9 @@ header {
         height: 75px;
         margin-left: 0 !important;
     }
-    .navbar-right {
-        margin-right: 0;
-    }
+    // .navbar-right {
+    //     margin-right: 0;
+    // }
 }
 
 main {
@@ -860,7 +940,8 @@ main {
     }
     .title-block {
         text-align: center;
-        padding-bottom: 83px;
+        padding-bottom: 66px;
+        padding-top: 78px;
         h1 {
             color: #1d1d1b;
             font-family: 'Montserrat';
@@ -876,6 +957,7 @@ main {
             font-weight: 400;
             letter-spacing: 1px;
             line-height: 30px;
+            margin-bottom: 22px;
             text-transform: uppercase;
         }
         p {
@@ -885,11 +967,12 @@ main {
             font-weight: 200;
             line-height: 36px;
             padding: 0 65px;
-            margin-bottom: 89px;
+            margin-bottom: 70px;
         }
         .fut-item {
             float: left;
             width: 33.33%;
+            margin-top: 71px;
             .fa {
                 color: #1d1d1b;
                 font-size: 48px;
@@ -927,10 +1010,11 @@ main {
                     width: 52px;
                 }
                 padding-right: 28px;
+                padding-left: 39px;
             }
             &:nth-child(2) {
-                padding-left: 28px;
-                padding-right: 28px;
+                padding-left: 43px;
+                padding-right: 15px;
                 .fa {
                     width: 48px;
                 }
@@ -940,7 +1024,7 @@ main {
                 }
             }
             &:nth-child(3) {
-                padding-left: 28px;
+                padding-left: 44px;
                 .fut-item-info {
                     margin-left: 48px;
                     padding-left: 24px;
@@ -956,7 +1040,7 @@ main {
         background-color: #64227b;
         color: white;
         padding-top: 91px;
-        padding-bottom: 100px;
+        padding-bottom: 97px;
         h1 {
             color: #ffffff;
             font-family: 'Montserrat';
@@ -998,6 +1082,14 @@ main {
             font-weight: 400;
             letter-spacing: 1px;
             padding: 10px 20px 10px 19px;
+            -webkit-transition: background 1s ease-out;
+                    -moz-transition: background 1s ease-out;
+                    -o-transition: background 1s ease-out;
+                    transition: background 1s ease-out;
+                    &:hover{
+                        background-position: 136px;
+                        text-decoration: none;
+                    }
             &:after {
                 content: '';
                 background-image: url(../img/arrow-right-l.png);
@@ -1010,13 +1102,15 @@ main {
     }
     .statistic-block {
         background-color: rgba(235, 235, 235, 0.5);
-        padding-top: 31px;
-        padding-bottom: 29px;
+        padding-top: 21px;
+        padding-bottom: 25px;
         ul {
             list-style: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
+            padding-left: 50px;
+            padding-right: 50px;
             li {
                 text-align: center;
                 display: inline-block;
@@ -1040,6 +1134,7 @@ main {
     .user-block {
         text-align: center;
         padding-bottom: 71px;
+        padding-top: 69px;
         h1 {
             color: #1d1d1b;
             font-family: 'Montserrat';
@@ -1068,6 +1163,7 @@ main {
             letter-spacing: 1px;
             line-height: 30px;
             text-transform: uppercase;
+            margin-bottom: 32px;
         }
         .owl-carousel {
             .date-item {
@@ -1110,6 +1206,8 @@ main {
                     /* Text style for "Meriam" */
                     font-weight: 700;
                     /* Text style for "(32)" */
+                    margin-top: 27px;
+                    margin-bottom: 7px;
                     span {
                         font-weight: 400;
                     }
@@ -1144,6 +1242,7 @@ main {
                     font-size: 14px;
                     font-weight: 200;
                     letter-spacing: 1px;
+                    margin-bottom: 4px;
                 }
                 p.location {
                     color: #1d1d1b;
@@ -1151,6 +1250,7 @@ main {
                     font-size: 14px;
                     font-weight: 200;
                     letter-spacing: 1px;
+                    margin-bottom: 25px;
                     &:before {
                         vertical-align: inherit;
                         display: inline-block;
@@ -1202,6 +1302,7 @@ main {
             font-size: 24px;
             font-weight: 700;
             margin-top: 72px;
+            margin-bottom: 29px;
         }
         a.gradient {
             display: inline-block;
@@ -1216,6 +1317,14 @@ main {
             font-weight: 400;
             letter-spacing: 1px;
             padding: 10px 20px 10px 19px;
+            -webkit-transition: background 1s ease-out;
+                    -moz-transition: background 1s ease-out;
+                    -o-transition: background 1s ease-out;
+                    transition: background 1s ease-out;
+            &:hover{
+                text-decoration: none;
+                background-position: 192px;
+            }
             &:after {
                 content: '';
                 background-image: url(../img/arrow-right-l.png);
@@ -1585,7 +1694,7 @@ main {
     }
     .links-block {
         background-color: rgba(235, 235, 235, 0.5);
-        padding-top: 73px;
+        padding-top: 63px;
         padding-bottom: 70px;
         .footer-item {
             h4 {
@@ -1623,6 +1732,8 @@ footer {
         background-color: #fff;
         img {
             margin-bottom: 29px;
+            width: 198px;
+            height: 76px;
         }
         span {
             display: block;
@@ -1810,26 +1921,26 @@ footer {
         }
     }
     main {
-        .links-block{
+        .links-block {
             padding-top: 34px;
-            .footer-item{
-                h4{
+            .footer-item {
+                h4 {
                     color: #1d1d1b;
-font-family: Montserrat;
-font-size: 24px;
-font-weight: 700;
-line-height: 29px;
+                    font-family: Montserrat;
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 29px;
                 }
-                ul{
+                ul {
                     margin-top: 0;
-                    li{
-                        a{
+                    li {
+                        a {
                             padding-left: 4px;
                             color: #1d1d1b;
-font-family: "Source Sans Pro";
-font-size: 16px;
-font-weight: 200;
-line-height: 32px;
+                            font-family: "Source Sans Pro";
+                            font-size: 16px;
+                            font-weight: 200;
+                            line-height: 32px;
                         }
                     }
                 }
@@ -1847,8 +1958,8 @@ line-height: 32px;
                 /* Text style for "Registreer" */
                 letter-spacing: -1px;
             }
-            a.gradient{
-                padding:9px 62px 9px 62px;
+            a.gradient {
+                padding: 9px 62px 9px 62px;
                 margin-bottom: 60px;
             }
         }
