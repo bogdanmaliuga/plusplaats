@@ -39,13 +39,16 @@ body.not-index {
         li {
             a {
                 color: black;
+                &:after {
+                    background-color: black;
+                }
             }
         }
     }
     .navbar-brand {
         background-image: url(../img/logo.svg);
-        width: 255px;
-        height: 75px;
+        width: 253px;
+        height: 74px;
     }
 }
 
@@ -237,7 +240,6 @@ header {
                     }
                     &:hover {
                         background-position: 163px;
-                        
                     }
                 }
                 a.forgot-link {
@@ -286,6 +288,10 @@ header {
                 letter-spacing: 0.3px;
                 padding: 10px 27px 11px 29px;
                 transition: all 0.45s;
+                -webkit-transition: background 1s ease-out;
+                -moz-transition: background 1s ease-out;
+                -o-transition: background 1s ease-out;
+                transition: background 1s ease-out;
                 &:after {
                     content: '';
                     background-image: url(../img/arrow-right.png);
@@ -296,7 +302,7 @@ header {
                 }
                 &:hover {
                     text-decoration: none;
-                    background-image: linear-gradient(135deg, #672582 100%, #94358b 0%);
+                    background-position: 239px;
                 }
             }
         }
@@ -325,13 +331,16 @@ header {
                 letter-spacing: 0.5px;
                 padding-left: 13.5px;
                 padding-right: 13.5px;
+                &:after {
+                    background-color: white;
+                }
             }
         }
     }
     .navbar-brand {
         background-image: url(../img/logo_wit.svg);
-        width: 255px;
-        height: 75px;
+        width: 253px;
+        height: 74px;
         margin-left: 0 !important;
     }
 }
@@ -390,6 +399,30 @@ header {
                 letter-spacing: 0.5px;
                 padding-left: 13.5px;
                 padding-right: 13.5px;
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    display: block;
+                    bottom: 0;
+                    left: 0;
+                    color: white;
+                    background-color: black;
+                    height: 2px;
+                    width: calc(100% - 27px);
+                    bottom: 0;
+                    left: 13.5px;
+                    display: none;
+                }
+                &:hover {
+                    &:after {
+                        display: block;
+                    }
+                    // border-color: white;
+                    //    border-style:solid;
+                    //    border-width: 0px 0px 2px 0px;
+                }
                 sup {
                     width: 24px;
                     height: 25px;
@@ -429,6 +462,13 @@ header {
                         padding-left: 18px;
                         padding-right: 41px;
                         font-weight: 300;
+                        &:hover {
+                            text-decoration: underline;
+                            background-color: transparent!important;
+                            &:after {
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
@@ -443,6 +483,11 @@ header {
                 border: 2px solid #7a2c86;
                 color: white;
                 background-image: linear-gradient(-45deg, #672582 0%, #94358b 100%);
+                &:hover {
+                    &:after {
+                        display: none;
+                    }
+                }
             }
         }
         li.open {
@@ -465,9 +510,9 @@ header {
         }
     }
     .navbar-brand {
-        background-image: url(../img/logo-purple.png);
-        width: 255px;
-        height: 75px;
+        background-image: url(../img/logo.svg);
+        width: 253px;
+        height: 74px;
         margin-left: 0 !important;
     }
     // .navbar-right {
@@ -548,6 +593,15 @@ main {
             32px);
             margin-bottom: 22px;
         }
+        .location-page {
+            color: white;
+            a {
+                color: white;
+            }
+            .fa {
+                color: white;
+            }
+        }
         .col-info {
             float: left;
             width: 66.696%;
@@ -595,6 +649,18 @@ main {
                     right: 19px;
                 }
             }
+        }
+    }
+    .location-block {
+        .meld-link {
+            margin-top: 29px;
+            display: inline-block;
+            float: right;
+            color: white;
+            color: #ffffff;
+            font-family: "Source Sans Pro";
+            font-size: 14px;
+            font-weight: 600;
         }
     }
     .friends-block {
@@ -822,6 +888,20 @@ main {
                             padding-right: 39.5px;
                         }
                     }
+                    &:first-child{
+                        a{
+                            &:hover{
+                                border-radius: 8px;
+                            }
+                        }
+                    }
+                    &:last-child{
+                        a{
+                            &:hover{
+                                border-radius:8px;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -903,7 +983,7 @@ main {
                 box-shadow: 0 2px 4px rgba(100, 100, 100, 0.2);
                 border-radius: 8px;
                 border: 1px solid #94358b;
-                background-color: rgba(255, 255, 255, 0.9);
+             
                 h2 {
                     margin: 0;
                     color: #ffffff;
@@ -925,6 +1005,7 @@ main {
                     letter-spacing: 1px;
                     // margin-left: 21px;
                     width: 100%;
+                       background-color: rgba(255, 255, 255, 0.9);
                     tr {
                         td {
                             padding-left: 21px;
@@ -1083,13 +1164,13 @@ main {
             letter-spacing: 1px;
             padding: 10px 20px 10px 19px;
             -webkit-transition: background 1s ease-out;
-                    -moz-transition: background 1s ease-out;
-                    -o-transition: background 1s ease-out;
-                    transition: background 1s ease-out;
-                    &:hover{
-                        background-position: 136px;
-                        text-decoration: none;
-                    }
+            -moz-transition: background 1s ease-out;
+            -o-transition: background 1s ease-out;
+            transition: background 1s ease-out;
+            &:hover {
+                background-position: 136px;
+                text-decoration: none;
+            }
             &:after {
                 content: '';
                 background-image: url(../img/arrow-right-l.png);
@@ -1275,6 +1356,10 @@ main {
                     letter-spacing: 1px;
                     padding: 7px 15px 9px 29px;
                     transition: all 0.45s;
+                    -webkit-transition: background 1s ease-out;
+                    -moz-transition: background 1s ease-out;
+                    -o-transition: background 1s ease-out;
+                    transition: background 1s ease-out;
                     &:after {
                         vertical-align: inherit;
                         content: '';
@@ -1286,7 +1371,7 @@ main {
                     }
                     &:hover {
                         text-decoration: none;
-                        background-image: linear-gradient(135deg, #672582 100%, #94358b 0%);
+                        background-position: 191px;
                     }
                 }
             }
@@ -1318,10 +1403,10 @@ main {
             letter-spacing: 1px;
             padding: 10px 20px 10px 19px;
             -webkit-transition: background 1s ease-out;
-                    -moz-transition: background 1s ease-out;
-                    -o-transition: background 1s ease-out;
-                    transition: background 1s ease-out;
-            &:hover{
+            -moz-transition: background 1s ease-out;
+            -o-transition: background 1s ease-out;
+            transition: background 1s ease-out;
+            &:hover {
                 text-decoration: none;
                 background-position: 192px;
             }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/main.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -55,8 +56,11 @@
         <div class="location-block profile-block">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-sm-6 col-xs-12">
                         <span class="location-page">U bevindt zich hier:<a href="" class="home">Home</a><i class="fa fa-angle-right"></i><a href="" class="current">Aanbieders zoeken</a></span>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <a class="meld-link" href="">Meld misbruik van deze gebruiker</a>
                     </div>
                 </div>
                 <div class="row full-height">
@@ -71,7 +75,7 @@
                             <div class="col-xs-12">
                                 <h3>Vezekeringsagent</h3>
                                 <p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalog te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen</p>
-                                <a href="#">Less meer</a>
+                                <a href="javascript:void(0);" class="lessLink">Less meer</a>
                             </div>
                         </div>
                     </div>
@@ -80,8 +84,11 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="img-container">
+                                    <a data-fancybox href="img/profile-photo.png">
                                         <img src="img/foto-profile-main.png" alt="">
-                                        <i class="fa fa-expand" aria-hidden="true"></i>
+                                       
+                                        <i class="fa fa-expand" style="color:white" aria-hidden="true"></i>
+                                         </a>
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +162,7 @@
                     </div>
                 </div>
                 <div class="row full-height">
-                    <div class="col-info">
+                    <div class="col-info" id="lessBlock">
                         <div class="row">
                             <div class="col-xs-12">
                                 <h1>Over Marcel <span>(47)</span></h1>
@@ -226,25 +233,25 @@
 
                         <div class="owl-carousel owl-theme" id='owl-photos'>
 
-                            <div class="date-item">
+                            <div class="date-item" data-fancybox href="img/foto-1.png">
+                                <div class="img-container" >
+                                    <img src="img/foto-1.png" alt="">
+                                </div>
+                                
+                            </div>
+                            <div class="date-item" data-fancybox href="img/foto-1.png">
                                 <div class="img-container">
                                     <img src="img/foto-1.png" alt="">
                                 </div>
                                 
                             </div>
-                            <div class="date-item">
-                                <div class="img-container">
-                                    <img src="img/foto-1.png" alt="">
-                                </div>
-                                
-                            </div>
-                            <div class="date-item">
+                            <div class="date-item" data-fancybox href="img/foto-1.png">
                                 <div class="img-container">
                                     <img src="img/foto-1.png" alt="">
                                 </div>
                                
                             </div>
-                            <div class="date-item">
+                            <div class="date-item" data-fancybox href="img/foto-1.png">
                                 <div class="img-container">
                                     <img src="img/foto-1.png" alt="">
                                 </div>
@@ -311,7 +318,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <img src="img/logo-footer.png" alt="">
+                        <img src="img/logo.svg" alt="">
                         <div class="footer-info">
                             <span>Copyright 2017 - <span class="pl">Plusplaats.nl</span></span>
                             <span><a href="">Algemene voorwaarden</a> | <a href="">Privacy voorwaarden</a></span>
@@ -324,6 +331,7 @@
     </footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 </body>

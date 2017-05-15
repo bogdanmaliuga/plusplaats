@@ -12,6 +12,11 @@ jQuery(document).ready(function($) {
             scrollTop: $("#scrollTo").offset().top - $(".navbar-fixed-top").height()-56
         }, 2000);
     });
+     $(".lessLink").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#lessBlock").offset().top - $(".navbar-fixed-top").height()-15
+        }, 2000);
+    });
 
     $(".navbar-collapse").css({ maxHeight: $(window).height() - $(".navbar-header").height() + "px" });
     $('.navbar-toggle').click(function(event) {
