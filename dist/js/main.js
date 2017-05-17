@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
     });
      $(".lessLink").click(function() {
         $('html, body').animate({
-            scrollTop: $("#lessBlock").offset().top - $(".navbar-fixed-top").height()-15
+            scrollTop: $("#lessBlock").offset().top - $(".navbar-fixed-top").height()-50
         }, 2000);
     });
 
@@ -60,13 +60,17 @@ jQuery(document).ready(function($) {
                 pagination: false
             },
             768: {
-                items: 2
+                items: 2,
+                margin: 15,
+                 pagination: false
             },
             1024: {
-                items: 3
+                items: 3,
+                 pagination: false
             },
             1300: {
-                items: 4
+                items: 4,
+                 pagination: false
             }
 
 

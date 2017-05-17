@@ -8,6 +8,9 @@ body {
   max-width: 1564px;
   width: 100%; }
 
+.owl-dots {
+  display: none; }
+
 .navbar.hover-navbar {
   box-shadow: 0 2px 4px 1px rgba(100, 100, 100, 0.15) !important;
   background-color: #672582 !important; }
@@ -17,7 +20,8 @@ body.not-index {
 
 .scrolled.navbar.navbar-index {
   box-shadow: 0 2px 4px 1px rgba(100, 100, 100, 0.15);
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  padding: 19.5px 0; }
   .scrolled.navbar.navbar-index ul.nav li a {
     color: black; }
     .scrolled.navbar.navbar-index ul.nav li a:after {
@@ -175,10 +179,10 @@ header .top-header {
       font-size: 16px;
       font-weight: 400;
       letter-spacing: 1px;
-      -webkit-transition: background 1s ease-out;
-      -moz-transition: background 1s ease-out;
-      -o-transition: background 1s ease-out;
-      transition: background 1s ease-out; }
+      -webkit-transition: all 1s linear;
+      -moz-transition: all 1s linear;
+      -o-transition: all 1s linear;
+      transition: all 1s linear; }
       header .top-header .top-header-form form button:after {
         content: '';
         background-image: url(../img/arrow-right-l.png);
@@ -187,7 +191,7 @@ header .top-header {
         display: inline-block;
         margin-left: 15px; }
       header .top-header .top-header-form form button:hover {
-        background-position: 163px; }
+        background: linear-gradient(135deg, #429321 0%, #429321 100%); }
     header .top-header .top-header-form form a.forgot-link {
       color: #507cc0;
       font-family: "Source Sans Pro";
@@ -219,7 +223,7 @@ header .top-header {
     box-shadow: 0 2px 4px rgba(100, 100, 100, 0.5);
     border-radius: 3px;
     border: 1px solid #7a2c86;
-    background-image: linear-gradient(135deg, #94358b 0%, #672582 100%);
+    background: linear-gradient(135deg, #94358b 0%, #672582 100%);
     color: white;
     color: #ffffff;
     font-family: "Source Sans Pro";
@@ -228,10 +232,10 @@ header .top-header {
     letter-spacing: 0.3px;
     padding: 10px 27px 11px 29px;
     transition: all 0.45s;
-    -webkit-transition: background 1s ease-out;
-    -moz-transition: background 1s ease-out;
-    -o-transition: background 1s ease-out;
-    transition: background 1s ease-out; }
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear; }
     header .top-header .top-header-info a.gradient-link:after {
       content: '';
       background-image: url(../img/arrow-right.png);
@@ -241,7 +245,7 @@ header .top-header {
       margin-left: 15px; }
     header .top-header .top-header-info a.gradient-link:hover {
       text-decoration: none;
-      background-position: 239px; }
+      background: linear-gradient(135deg, #672582 0%, #672582 100%); }
   header .top-header a.scroll {
     position: absolute;
     bottom: 35px;
@@ -492,7 +496,11 @@ main .profile-block {
       font-family: "Source Sans Pro";
       font-size: 16px;
       font-weight: 400;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      -webkit-transition: all 1s linear;
+      -moz-transition: all 1s linear;
+      -o-transition: all 1s linear;
+      transition: all 1s linear; }
       main .profile-block .col-info a:after {
         content: '';
         background-image: url(../img/arrow-right-l.png);
@@ -500,6 +508,11 @@ main .profile-block {
         height: 9px;
         display: inline-block;
         margin-left: 15px; }
+      main .profile-block .col-info a:hover {
+        background-image: linear-gradient(135deg, #429321 0%, #429321 100%);
+        text-decoration: none; }
+      main .profile-block .col-info a:focus {
+        text-decoration: none; }
   main .profile-block .col-photo {
     float: left;
     padding: 0 15px;
@@ -540,12 +553,14 @@ main .friends-block {
     font-size: 44px;
     font-weight: 700;
     letter-spacing: -2px;
-    line-height: 48px; }
+    line-height: 48px;
+    margin-bottom: 33px; }
     main .friends-block h1 span {
       font-weight: 400;
       padding-left: 5px; }
     main .friends-block h1 .fa {
-      font-weight: 400; }
+      font-weight: 400;
+      margin-left: 22px; }
   main .friends-block .owl-carousel {
     text-align: center; }
     main .friends-block .owl-carousel .date-item {
@@ -582,6 +597,8 @@ main .friends-block {
         font-size: 21px;
         /* Text style for "Meriam" */
         font-weight: 700;
+        margin-top: 24px;
+        margin-bottom: 7px;
         /* Text style for "(32)" */ }
         main .friends-block .owl-carousel .date-item h3 span {
           font-weight: 400; }
@@ -592,7 +609,7 @@ main .friends-block {
         main .friends-block .owl-carousel .date-item h3.offline:before {
           vertical-align: inherit;
           display: inline-block;
-          margin-right: 10px;
+          margin-right: 7px;
           content: '';
           width: 4px;
           height: 4px;
@@ -606,13 +623,15 @@ main .friends-block {
         font-family: "Source Sans Pro";
         font-size: 14px;
         font-weight: 200;
-        letter-spacing: 1px; }
+        letter-spacing: 1px;
+        margin-bottom: 5px; }
       main .friends-block .owl-carousel .date-item p.location {
         color: #1d1d1b;
         font-family: "Source Sans Pro";
         font-size: 14px;
         font-weight: 200;
-        letter-spacing: 1px; }
+        letter-spacing: 1px;
+        margin-bottom: 25px; }
         main .friends-block .owl-carousel .date-item p.location:before {
           vertical-align: inherit;
           display: inline-block;
@@ -648,8 +667,8 @@ main .friends-block {
           background-image: linear-gradient(135deg, #672582 100%, #94358b 0%); }
 
 main .photos-block {
-  padding-top: 67px;
-  padding-bottom: 82px; }
+  padding-top: 68px;
+  padding-bottom: 80px; }
   main .photos-block h1 {
     margin-top: 0;
     color: #1d1d1b;
@@ -657,17 +676,20 @@ main .photos-block {
     font-size: 44px;
     font-weight: 700;
     letter-spacing: -2px;
-    line-height: 48px; }
+    line-height: 48px;
+    margin-bottom: 33px; }
     main .photos-block h1 span {
       font-weight: 400;
       padding-left: 5px; }
     main .photos-block h1 .fa {
-      font-weight: 400; }
+      font-weight: 400;
+      margin-left: 22px; }
 
 main .profile-info-block {
   background-color: #64227b;
   color: white;
-  position: relative; }
+  position: relative;
+  padding-bottom: 76px; }
   main .profile-info-block .profile-buttons {
     position: absolute;
     border-radius: 8px;
@@ -798,19 +820,64 @@ main .profile-info-block {
         text-transform: uppercase;
         border-radius: 8px 8px 0 0;
         background-color: #94358b; }
+      main .profile-info-block .col-photo .profile-detail-container .button-container {
+        padding: 22px 0;
+        text-align: center;
+        background-color: #fff; }
+        main .profile-info-block .col-photo .profile-detail-container .button-container a {
+          display: inline-block;
+          box-shadow: 0 2px 4px rgba(100, 100, 100, 0.2);
+          border-radius: 3px;
+          border: 1px solid #95c85d;
+          padding: 8px 16px 8px 16px;
+          background-image: linear-gradient(135deg, #91c831 0%, #429321 100%);
+          color: #ffffff;
+          font-family: "Source Sans Pro";
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 1px;
+          -webkit-transition: all 1s linear;
+          -moz-transition: all 1s linear;
+          -o-transition: all 1s linear;
+          transition: all 1s linear; }
+          main .profile-info-block .col-photo .profile-detail-container .button-container a:after {
+            content: '';
+            background-image: url(../img/arrow-right-l.png);
+            width: 5px;
+            height: 9px;
+            display: inline-block;
+            margin-left: 15px; }
+          main .profile-info-block .col-photo .profile-detail-container .button-container a:hover {
+            background-image: linear-gradient(135deg, #429321 0%, #429321 100%);
+            text-decoration: none; }
+          main .profile-info-block .col-photo .profile-detail-container .button-container a:focus {
+            text-decoration: none; }
       main .profile-info-block .col-photo .profile-detail-container table {
-        color: black;
-        font-family: "Source Sans Pro";
-        font-size: 16px;
-        font-weight: 400;
-        letter-spacing: 1px;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.9); }
+        main .profile-info-block .col-photo .profile-detail-container table tr:first-child td {
+          padding-top: 12px;
+          padding-bottom: 11px; }
+        main .profile-info-block .col-photo .profile-detail-container table tr:last-child td {
+          padding-bottom: 55px; }
+          main .profile-info-block .col-photo .profile-detail-container table tr:last-child td:last-child {
+            word-break: break-word;
+            line-height: 30px; }
+          main .profile-info-block .col-photo .profile-detail-container table tr:last-child td:first-child {
+            vertical-align: top; }
         main .profile-info-block .col-photo .profile-detail-container table tr td {
           padding-left: 21px;
-          line-height: 30px; }
+          line-height: 30px;
+          color: black;
+          font-family: "Source Sans Pro";
+          font-size: 18px; }
+          main .profile-info-block .col-photo .profile-detail-container table tr td:first-child {
+            white-space: nowrap;
+            letter-spacing: -0.43px; }
           main .profile-info-block .col-photo .profile-detail-container table tr td:last-child {
-            font-weight: 600; }
+            font-weight: 600;
+            word-break: break-all;
+            letter-spacing: -0.43px; }
 
 main .title-block {
   text-align: center;
@@ -937,12 +1004,12 @@ main .reference-block {
     font-weight: 400;
     letter-spacing: 1px;
     padding: 10px 20px 10px 19px;
-    -webkit-transition: background 1s ease-out;
-    -moz-transition: background 1s ease-out;
-    -o-transition: background 1s ease-out;
-    transition: background 1s ease-out; }
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear; }
     main .reference-block a:hover {
-      background-position: 136px;
+      background-image: linear-gradient(135deg, #429321 0%, #429321 100%);
       text-decoration: none; }
     main .reference-block a:after {
       content: '';
@@ -1100,10 +1167,10 @@ main .user-block {
       letter-spacing: 1px;
       padding: 7px 15px 9px 29px;
       transition: all 0.45s;
-      -webkit-transition: background 1s ease-out;
-      -moz-transition: background 1s ease-out;
-      -o-transition: background 1s ease-out;
-      transition: background 1s ease-out; }
+      -webkit-transition: all 1s linear;
+      -moz-transition: all 1s linear;
+      -o-transition: all 1s linear;
+      transition: all 1s linear; }
       main .user-block .owl-carousel .date-item a:after {
         vertical-align: inherit;
         content: '';
@@ -1114,7 +1181,7 @@ main .user-block {
         margin-left: 15px; }
       main .user-block .owl-carousel .date-item a:hover {
         text-decoration: none;
-        background-position: 191px; }
+        background-image: linear-gradient(135deg, #672582 0%, #672582 100%); }
 
 main .registeren-block {
   position: relative;
@@ -1140,13 +1207,13 @@ main .registeren-block {
     font-weight: 400;
     letter-spacing: 1px;
     padding: 10px 20px 10px 19px;
-    -webkit-transition: background 1s ease-out;
-    -moz-transition: background 1s ease-out;
-    -o-transition: background 1s ease-out;
-    transition: background 1s ease-out; }
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear; }
     main .registeren-block a.gradient:hover {
       text-decoration: none;
-      background-position: 192px; }
+      background-image: linear-gradient(135deg, #429321 0%, #429321 100%); }
     main .registeren-block a.gradient:after {
       content: '';
       background-image: url(../img/arrow-right-l.png);
@@ -1161,12 +1228,14 @@ main .registeren-block {
     left: calc(50% - 96.5px); }
     main .registeren-block .social-block .social-item {
       display: inline-block;
+      position: relative;
       float: left;
       width: 40px;
       height: 40px;
       border: 1px solid #ebebeb;
       background-color: #ffffff;
-      border-radius: 100px; }
+      border-radius: 100px;
+      z-index: 1; }
       main .registeren-block .social-block .social-item:nth-child(2) {
         margin: 0 11px; }
       main .registeren-block .social-block .social-item:nth-child(3) {
@@ -1176,11 +1245,25 @@ main .registeren-block {
         color: #1d1d1b;
         font-size: 18px;
         font-weight: 400; }
+      main .registeren-block .social-block .social-item:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-image: linear-gradient(-45deg, #93358b 0%, #93358b 100%);
+        opacity: 0;
+        border-radius: 100px;
+        z-index: -1;
+        transition: all 0.5s linear; }
       main .registeren-block .social-block .social-item:hover {
         border: 1px solid #7a2c86;
         background-image: linear-gradient(-45deg, #6a2683 0%, #93358b 100%); }
         main .registeren-block .social-block .social-item:hover .fa {
           color: white; }
+        main .registeren-block .social-block .social-item:hover:after {
+          opacity: 1; }
 
 main .location-page {
   color: #1d1d1b;
@@ -1466,13 +1549,13 @@ main .links-block {
 footer {
   border-top: 1px solid #ebebeb; }
   footer .bottom-footer {
-    padding-top: 38px;
+    padding-top: 25px;
     text-align: center;
     padding-bottom: 31px;
     background-color: #fff; }
     footer .bottom-footer img {
-      margin-bottom: 29px;
-      width: 198px;
+      margin-bottom: 21px;
+      width: 192px;
       height: 76px; }
     footer .bottom-footer span {
       display: block;
@@ -1502,9 +1585,9 @@ footer {
   .navbar.navbar-index {
     padding: 10px 20px; }
     .navbar.navbar-index .navbar-brand {
-      width: 119px;
-      background-image: url(../img/logo-plusplaats-mobile-index.png);
-      height: 35px; }
+      width: 120px;
+      height: 35px;
+      background-repeat: no-repeat; }
     .navbar.navbar-index ul.nav {
       padding-top: 0;
       padding-bottom: 0;
@@ -1517,14 +1600,15 @@ footer {
         line-height: 52px;
         padding-top: 0;
         padding-bottom: 0; }
-  .scrolled.navbar.navbar-index .navbar-brand {
-    width: 119px;
-    background-image: url(../img/logo-mobile-hover.png);
-    height: 35px; }
-  .scrolled.navbar.navbar-index .navbar-toggle .icon-bar {
-    background-color: black !important; }
-  .scrolled.navbar.navbar-index ul.nav li a {
-    color: white; }
+  .scrolled.navbar.navbar-index {
+    padding: 10px 20px; }
+    .scrolled.navbar.navbar-index .navbar-brand {
+      width: 119px;
+      height: 35px; }
+    .scrolled.navbar.navbar-index .navbar-toggle .icon-bar {
+      background-color: black !important; }
+    .scrolled.navbar.navbar-index ul.nav li a {
+      color: white; }
   .navbar-toggle {
     margin-right: 0;
     border: none;
@@ -1554,7 +1638,12 @@ footer {
         margin-bottom: 12px; }
       header .top-header .top-header-form form input[type='email'],
       header .top-header .top-header-form form input[type='password'] {
-        height: 40px; }
+        height: 40px;
+        border-color: gray; }
+      header .top-header .top-header-form form label:last-child {
+        display: block;
+        text-align: center;
+        width: 100%; }
       header .top-header .top-header-form form .checkbox-label {
         float: none;
         display: block;
@@ -1611,21 +1700,23 @@ footer {
         letter-spacing: 1px; }
   main .links-block {
     padding-top: 34px; }
-    main .links-block .footer-item h4 {
-      color: #1d1d1b;
-      font-family: Montserrat;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 29px; }
-    main .links-block .footer-item ul {
-      margin-top: 0; }
-      main .links-block .footer-item ul li a {
-        padding-left: 4px;
+    main .links-block .footer-item {
+      margin-bottom: 30px; }
+      main .links-block .footer-item h4 {
         color: #1d1d1b;
-        font-family: "Source Sans Pro";
-        font-size: 16px;
-        font-weight: 200;
-        line-height: 32px; }
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px; }
+      main .links-block .footer-item ul {
+        margin-top: 0; }
+        main .links-block .footer-item ul li a {
+          padding-left: 4px;
+          color: #1d1d1b;
+          font-family: "Source Sans Pro";
+          font-size: 16px;
+          font-weight: 200;
+          line-height: 32px; }
   main .registeren-block h1 {
     margin-top: 33px;
     margin-bottom: 21px;
@@ -1650,7 +1741,8 @@ footer {
       font-size: 25px;
       font-weight: 700;
       letter-spacing: -1px;
-      line-height: 32px; }
+      line-height: 32px;
+      padding: 0 30px; }
     main .user-block h2 {
       color: #1d1d1b;
       font-family: Montserrat;
@@ -1673,6 +1765,10 @@ footer {
       font-size: 14px;
       font-weight: 200;
       letter-spacing: 0.1px; }
+    main .user-block .owl-carousel .owl-item {
+      opacity: 0.5; }
+    main .user-block .owl-carousel .owl-item.active {
+      opacity: 1; }
     main .user-block .owl-carousel .date-item p.location {
       margin-bottom: 25px; }
     main .user-block .owl-carousel .date-item p.type {
@@ -1820,3 +1916,17 @@ footer {
           font-size: 28px;
           width: 28px;
           line-height: 28px; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .navbar.navbar-index {
+    padding: 10px 20px; }
+    .navbar.navbar-index .navbar-brand {
+      width: 125px;
+      height: 35px;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  header .top-header .top-header-info {
+    text-align: left; }
+  .footer-item {
+    width: 50%;
+    text-align: center; } }
