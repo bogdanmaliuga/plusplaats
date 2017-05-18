@@ -1,6 +1,65 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+.select {
+  position: relative;
+  display: inline-block;
+  width: 109px;
+  max-width: 109px;
+  border-radius: 8px;
+  border: 1px solid #ebebeb;
+  background-color: #ffffff;
+  margin-top: 13px;
+  float: right; }
+
+.select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  background: white;
+  color: #9b9b9b;
+  font-size: 14px;
+  font-weight: 400;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.select select::-ms-expand {
+  display: none; }
+
+.select select:hover,
+.select select:focus {
+  color: #9b9b9b;
+  background: white; }
+
+.select select:disabled {
+  opacity: 0.5;
+  pointer-events: none; }
+
+.select__arrow {
+  position: absolute;
+  top: 11px;
+  right: 13px;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .select__arrow:before {
+    content: '\f107'; }
+
+.select select:hover ~ .select__arrow,
+.select select:focus ~ .select__arrow {
+  border-top-color: #000; }
+
+.select select:disabled ~ .select__arrow {
+  border-top-color: #ccc; }
+
 body {
   font-family: 'Source Sans Pro'; }
 
@@ -11,7 +70,7 @@ body {
 .owl-dots {
   display: none; }
 
-.navbar.hover-navbar {
+.navbar-index.hover-navbar {
   box-shadow: 0 2px 4px 1px rgba(100, 100, 100, 0.15) !important;
   background-color: #672582 !important; }
 
@@ -1290,6 +1349,8 @@ main .search-block {
   padding-bottom: 76px; }
   main .search-block .full-height {
     display: flex; }
+  main .search-block .select-mobile {
+    display: none; }
   main .search-block .cheked-block {
     max-width: 255px;
     height: 100%;
@@ -1371,7 +1432,7 @@ main .search-block {
     font-weight: 700;
     letter-spacing: -1.7px;
     line-height: 30px;
-    margin-bottom: 31px; }
+    margin-bottom: 11px; }
   main .search-block .dates-block h2 {
     color: #1d1d1b;
     font-family: 'Montserrat';
@@ -1380,7 +1441,8 @@ main .search-block {
     letter-spacing: 1.3px;
     line-height: 30px;
     text-transform: uppercase;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    display: inline-block; }
   main .search-block .dates-block .owl-carousel {
     text-align: center;
     margin-bottom: 38px; }
@@ -1575,6 +1637,8 @@ footer {
       font-weight: 200; }
 
 @media (max-width: 768px) {
+  body.not-index {
+    padding-top: 61px; }
   .navbar-default .navbar-toggle {
     background-color: transparent; }
     .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
@@ -1582,6 +1646,44 @@ footer {
   .navbar-collapse {
     border: none;
     box-shadow: none; }
+  .navbar {
+    padding: 10px 20px; }
+    .navbar .navbar-brand {
+      width: 120px;
+      height: 35px; }
+    .navbar ul.nav li.dropdown ul.dropdown-menu {
+      background-image: none;
+      background-color: #fff;
+      border: none;
+      color: black; }
+      .navbar ul.nav li.dropdown ul.dropdown-menu li a {
+        color: #1d1d1b;
+        font-family: "Source Sans Pro";
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 52px; }
+    .navbar ul.nav li.my-account {
+      margin-left: 0; }
+      .navbar ul.nav li.my-account > a {
+        background-color: #fff;
+        border: none;
+        box-shadow: none;
+        background-image: none;
+        color: black; }
+    .navbar ul.nav li.open a {
+      background-image: none !important;
+      background-color: #fff;
+      border: none;
+      color: black; }
+      .navbar ul.nav li.open a:hover, .navbar ul.nav li.open a:focus {
+        color: #1d1d1b;
+        background-color: white; }
+    .navbar ul.nav li a {
+      color: #1d1d1b;
+      font-family: "Source Sans Pro";
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 52px; }
   .navbar.navbar-index {
     padding: 10px 20px; }
     .navbar.navbar-index .navbar-brand {
@@ -1600,6 +1702,8 @@ footer {
         line-height: 52px;
         padding-top: 0;
         padding-bottom: 0; }
+    .navbar.navbar-index .navbar-toggle .icon-bar {
+      background-color: white !important; }
   .scrolled.navbar.navbar-index {
     padding: 10px 20px; }
     .scrolled.navbar.navbar-index .navbar-brand {
@@ -1621,7 +1725,7 @@ footer {
     .navbar-toggle .icon-bar {
       width: 20px;
       height: 4px;
-      background-color: #ffffff !important; }
+      background-color: #1d1d1b !important; }
   header .top-header {
     padding-top: 75px;
     padding-bottom: 28px; }
@@ -1915,7 +2019,143 @@ footer {
         main .title-block .fut-item:nth-child(3) .fa {
           font-size: 28px;
           width: 28px;
-          line-height: 28px; } }
+          line-height: 28px; }
+  main .location-block .meld-link {
+    margin-top: 15px;
+    float: left; }
+  main .profile-info-block .profile-buttons {
+    position: static;
+    width: 100%; }
+    main .profile-info-block .profile-buttons ul li {
+      height: auto;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #eaeaea; }
+      main .profile-info-block .profile-buttons ul li a {
+        display: inline-block;
+        width: 100%;
+        padding-left: 50px; }
+        main .profile-info-block .profile-buttons ul li a div.text {
+          float: none;
+          vertical-align: middle; }
+        main .profile-info-block .profile-buttons ul li a span.icon {
+          float: none; }
+      main .profile-info-block .profile-buttons ul li:last-child {
+        border-bottom: none; }
+  main .profile-info-block .row.full-height {
+    display: block;
+    margin-top: 30px; }
+  main .profile-info-block .col-info {
+    float: none;
+    width: 100%; }
+    main .profile-info-block .col-info h1 {
+      font-size: 26px; }
+    main .profile-info-block .col-info h3 {
+      font-size: 14px;
+      margin-top: 0; }
+    main .profile-info-block .col-info p {
+      font-size: 14px;
+      font-weight: 200;
+      line-height: 28px; }
+  main .profile-info-block .col-photo {
+    width: 100%;
+    float: none;
+    padding: 0; }
+    main .profile-info-block .col-photo .col-photo-container {
+      position: static;
+      padding: 0 15px;
+      margin: 0;
+      width: 100%; }
+  main .col-sm-9 {
+    padding: 0; }
+  main .search-block .pages-block {
+    padding-right: 15px; }
+  main .search-block .dates-block {
+    text-align: center; }
+    main .search-block .dates-block h1 {
+      color: #1d1d1b;
+      font-family: Montserrat;
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      line-height: 32px;
+      padding: 0 30px; }
+    main .search-block .dates-block h2 {
+      color: #1d1d1b;
+      font-family: Montserrat;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 22px;
+      text-transform: uppercase; }
+  main .search-block .cheked-block {
+    max-width: 100%;
+    padding-top: 19px; }
+    main .search-block .cheked-block .main-title {
+      color: #1d1d1b;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0;
+      margin-bottom: 15px; }
+      main .search-block .cheked-block .main-title:after {
+        font: normal normal normal 14px/1 FontAwesome;
+        content: "\f107";
+        width: 12px;
+        height: 12px;
+        color: #1d1d1b;
+        font-size: 19px;
+        font-weight: 400;
+        float: right; }
+  main .search-block .select {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px; }
+  main .search-block .select-desktop {
+    display: none; }
+  main .search-block .full-height {
+    display: block; }
+  main .search-block .filter-container {
+    display: none; }
+  main .search-block .dates-block h2 {
+    display: block; }
+  main .search-block .select.select-mobile {
+    display: block;
+    float: none; }
+  main .profile-block h1 {
+    margin-top: 30px; }
+  main .profile-block .row.full-height {
+    display: block; }
+  main .profile-block .col-info {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; }
+  main .profile-block .col-photo {
+    width: 100%;
+    float: none;
+    padding: 0; }
+    main .profile-block .col-photo .col-photo-container {
+      position: static;
+      padding: 0 15px; }
+      main .profile-block .col-photo .col-photo-container img {
+        max-width: 100%; }
+  main .photos-block {
+    padding-top: 40px; }
+    main .photos-block .col-xs-12 {
+      padding: 0; }
+    main .photos-block h1 {
+      padding: 0 15px;
+      font-size: 25px;
+      line-height: 28px; }
+  main .friends-block {
+    padding-top: 40px; }
+    main .friends-block .col-xs-12 {
+      padding: 0; }
+    main .friends-block h1 {
+      padding: 0 15px;
+      font-size: 25px;
+      line-height: 28px; } }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   .navbar.navbar-index {

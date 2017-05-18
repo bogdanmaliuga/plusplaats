@@ -6,6 +6,16 @@ jQuery(document).ready(function($) {
         console.log($nav.height());
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
+    $('.main-title').click(function(event) {
+        if($('.filter-container').css('display')=='block'){
+            $('.filter-container').css('display','none');
+        }
+        else{
+             $('.filter-container').css('display','block');
+        }
+
+      
+    });
 
      $(".scroll").click(function() {
         $('html, body').animate({
