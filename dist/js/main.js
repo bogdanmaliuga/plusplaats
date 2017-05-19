@@ -4,6 +4,7 @@ jQuery(document).ready(function($) {
         var $nav = $(".navbar-fixed-top");
         
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+         $nav.toggleClass('not-scrolled', $(this).scrollTop() <= $nav.height());
     });
     $('.main-title').click(function(event) {
         if($('.filter-container').css('display')=='block'){
@@ -31,12 +32,12 @@ jQuery(document).ready(function($) {
     });
      $(".scroll").click(function() {
         $('html, body').animate({
-            scrollTop: $("#scrollTo").offset().top - $(".navbar-fixed-top").height()
+            scrollTop: $("#scrollTo").offset().top - $(".navbar-fixed-top").height()-20
         }, 2000);
     });
      $(".lessLink").click(function() {
         $('html, body').animate({
-            scrollTop: $("#lessBlock").offset().top - $(".navbar-fixed-top").height()-50
+            scrollTop: $("#lessBlock").offset().top - $(".navbar-fixed-top").height()-85
         }, 2000);
     });
 
