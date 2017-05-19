@@ -2,24 +2,36 @@ jQuery(document).ready(function($) {
     
     $(document).scroll(function() {
         var $nav = $(".navbar-fixed-top");
-        console.log($(this).scrollTop());
-        console.log($nav.height());
+        
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
     });
     $('.main-title').click(function(event) {
         if($('.filter-container').css('display')=='block'){
             $('.filter-container').css('display','none');
+            $('.main-title').removeClass('line-up');
         }
         else{
              $('.filter-container').css('display','block');
+              $('.main-title').addClass('line-up');
         }
 
       
     });
+    $('.navbar-toggle').click(function(event) {
 
+        if ($(this).hasClass('collapsed')) {
+            $(this).addClass('menu-show');
+
+
+        } else {
+            $(this).removeClass('menu-show');
+
+
+        }
+    });
      $(".scroll").click(function() {
         $('html, body').animate({
-            scrollTop: $("#scrollTo").offset().top - $(".navbar-fixed-top").height()-56
+            scrollTop: $("#scrollTo").offset().top - $(".navbar-fixed-top").height()
         }, 2000);
     });
      $(".lessLink").click(function() {

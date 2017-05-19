@@ -1,6 +1,41 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+.menu-show {
+  transition: all 0.3s linear; }
+
+@-webkit-keyframes bounce-fade {
+  0% {
+    opacity: 0;
+    bottom: 100px; }
+  100% {
+    opacity: 1;
+    bottom: 60px; } }
+
+@-moz-keyframes bounce-fade {
+  0% {
+    opacity: 0;
+    bottom: 100px; }
+  100% {
+    opacity: 1;
+    bottom: 60px; } }
+
+@-o-keyframes bounce-fade {
+  0% {
+    opacity: 0;
+    bottom: 100px; }
+  100% {
+    opacity: 1;
+    bottom: 60px; } }
+
+@keyframes bounce-fade {
+  0% {
+    opacity: 0;
+    bottom: 100px; }
+  100% {
+    opacity: 1;
+    bottom: 60px; } }
+
 .select {
   position: relative;
   display: inline-block;
@@ -43,7 +78,7 @@
 .select__arrow {
   position: absolute;
   top: 11px;
-  right: 13px;
+  right: 19px;
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -51,7 +86,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   .select__arrow:before {
-    content: '\f107'; }
+    content: '\f107';
+    font-size: 19px;
+    font-weight: 400; }
 
 .select select:hover ~ .select__arrow,
 .select select:focus ~ .select__arrow {
@@ -77,6 +114,9 @@ body {
 body.not-index {
   padding-top: 113px; }
 
+.scrolled {
+  transition: all 0.3s linear; }
+
 .scrolled.navbar.navbar-index {
   box-shadow: 0 2px 4px 1px rgba(100, 100, 100, 0.15);
   background-color: #ffffff;
@@ -98,8 +138,8 @@ header .top-header {
   background-size: cover;
   background-image: url(../img/top-header-bg.png);
   padding-top: 240px;
-  padding-bottom: 456px;
-  background-position: center center; }
+  background-position: center center;
+  height: 100vh; }
   header .top-header:before {
     content: '';
     position: absolute;
@@ -308,7 +348,11 @@ header .top-header {
   header .top-header a.scroll {
     position: absolute;
     bottom: 35px;
-    left: calc(50% - 11.5px); }
+    left: calc(50% - 11.5px);
+    -webkit-animation: bounce-fade 1.2s infinite;
+    -moz-animation: bounce-fade 1.2s infinite;
+    -o-animation: bounce-fade 1.2s infinite;
+    animation: bounce-fade 1.2s infinite; }
 
 .navbar.navbar-index {
   padding: 40px 0;
@@ -792,7 +836,8 @@ main .profile-info-block {
             line-height: 22px;
             font-weight: 400; }
           main .profile-info-block .profile-buttons ul li a:hover {
-            background-image: linear-gradient(180deg, #ffffff 0%, #f3f8fc 100%); }
+            background-image: linear-gradient(180deg, #ffffff 0%, #f3f8fc 100%);
+            text-decoration: none; }
         main .profile-info-block .profile-buttons ul li:first-child {
           border-left: none; }
         main .profile-info-block .profile-buttons ul li:last-child a {
@@ -915,8 +960,7 @@ main .profile-info-block {
         width: 100%;
         background-color: rgba(255, 255, 255, 0.9); }
         main .profile-info-block .col-photo .profile-detail-container table tr:first-child td {
-          padding-top: 12px;
-          padding-bottom: 11px; }
+          padding-top: 12px; }
         main .profile-info-block .col-photo .profile-detail-container table tr:last-child td {
           padding-bottom: 55px; }
           main .profile-info-block .col-photo .profile-detail-container table tr:last-child td:last-child {
@@ -927,12 +971,13 @@ main .profile-info-block {
         main .profile-info-block .col-photo .profile-detail-container table tr td {
           padding-left: 21px;
           line-height: 30px;
-          color: black;
+          color: #1d1d1b;
           font-family: "Source Sans Pro";
           font-size: 18px; }
           main .profile-info-block .col-photo .profile-detail-container table tr td:first-child {
             white-space: nowrap;
-            letter-spacing: -0.43px; }
+            letter-spacing: -0.43px;
+            font-weight: 200; }
           main .profile-info-block .col-photo .profile-detail-container table tr td:last-child {
             font-weight: 600;
             word-break: break-all;
@@ -1728,7 +1773,8 @@ footer {
       background-color: #1d1d1b !important; }
   header .top-header {
     padding-top: 75px;
-    padding-bottom: 28px; }
+    padding-bottom: 28px;
+    height: auto; }
     header .top-header a.scroll {
       display: none; }
     header .top-header .top-header-form form {
@@ -2034,7 +2080,7 @@ footer {
       main .profile-info-block .profile-buttons ul li a {
         display: inline-block;
         width: 100%;
-        padding-left: 50px; }
+        padding-left: 11px; }
         main .profile-info-block .profile-buttons ul li a div.text {
           float: none;
           vertical-align: middle; }
@@ -2065,63 +2111,75 @@ footer {
       position: static;
       padding: 0 15px;
       margin: 0;
-      width: 100%; }
+      width: 100%;
+      margin-top: 30px; }
   main .col-sm-9 {
     padding: 0; }
-  main .search-block .pages-block {
-    padding-right: 15px; }
-  main .search-block .dates-block {
-    text-align: center; }
-    main .search-block .dates-block h1 {
-      color: #1d1d1b;
-      font-family: Montserrat;
-      font-size: 25px;
-      font-weight: 700;
-      letter-spacing: -1px;
-      line-height: 32px;
-      padding: 0 30px; }
-    main .search-block .dates-block h2 {
-      color: #1d1d1b;
-      font-family: Montserrat;
-      font-size: 12px;
-      font-weight: 400;
-      letter-spacing: 1px;
-      line-height: 22px;
-      text-transform: uppercase; }
-  main .search-block .cheked-block {
-    max-width: 100%;
-    padding-top: 19px; }
-    main .search-block .cheked-block .main-title {
-      color: #1d1d1b;
-      font-family: Montserrat;
-      font-size: 18px;
-      font-weight: 700;
-      margin: 0;
-      margin-bottom: 15px; }
-      main .search-block .cheked-block .main-title:after {
-        font: normal normal normal 14px/1 FontAwesome;
-        content: "\f107";
-        width: 12px;
-        height: 12px;
+  main .search-block {
+    padding-bottom: 30px; }
+    main .search-block .dates-block .owl-carousel {
+      margin-bottom: 27px; }
+      main .search-block .dates-block .owl-carousel .owl-item {
+        opacity: 0.5; }
+      main .search-block .dates-block .owl-carousel .owl-item.active {
+        opacity: 1; }
+    main .search-block .pages-block {
+      padding-right: 15px;
+      text-align: center; }
+    main .search-block .dates-block {
+      text-align: center; }
+      main .search-block .dates-block h1 {
         color: #1d1d1b;
-        font-size: 19px;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        line-height: 32px;
+        padding: 0 30px; }
+      main .search-block .dates-block h2 {
+        color: #1d1d1b;
+        font-family: Montserrat;
+        font-size: 12px;
         font-weight: 400;
-        float: right; }
-  main .search-block .select {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px; }
-  main .search-block .select-desktop {
-    display: none; }
-  main .search-block .full-height {
-    display: block; }
-  main .search-block .filter-container {
-    display: none; }
-  main .search-block .dates-block h2 {
-    display: block; }
-  main .search-block .select.select-mobile {
-    display: block;
-    float: none; }
+        letter-spacing: 1px;
+        line-height: 22px;
+        text-transform: uppercase; }
+    main .search-block .cheked-block {
+      max-width: 100%;
+      padding-top: 19px; }
+      main .search-block .cheked-block .main-title.line-up:after {
+        content: "\f106"; }
+      main .search-block .cheked-block .main-title {
+        color: #1d1d1b;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+        margin-bottom: 15px; }
+        main .search-block .cheked-block .main-title:after {
+          font: normal normal normal 14px/1 FontAwesome;
+          content: "\f107";
+          width: 12px;
+          height: 12px;
+          color: #1d1d1b;
+          font-size: 19px;
+          font-weight: 400;
+          float: right; }
+    main .search-block .select {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 20px; }
+    main .search-block .select-desktop {
+      display: none; }
+    main .search-block .full-height {
+      display: block; }
+    main .search-block .filter-container {
+      display: none; }
+    main .search-block .dates-block h2 {
+      display: block; }
+    main .search-block .select.select-mobile {
+      display: block;
+      float: none; }
   main .profile-block h1 {
     margin-top: 30px; }
   main .profile-block .row.full-height {
@@ -2148,14 +2206,23 @@ footer {
       padding: 0 15px;
       font-size: 25px;
       line-height: 28px; }
+    main .photos-block .owl-item {
+      opacity: 0.5; }
+    main .photos-block .owl-item.active {
+      opacity: 1; }
   main .friends-block {
-    padding-top: 40px; }
+    padding-top: 40px;
+    padding-bottom: 40px; }
     main .friends-block .col-xs-12 {
       padding: 0; }
     main .friends-block h1 {
       padding: 0 15px;
       font-size: 25px;
-      line-height: 28px; } }
+      line-height: 28px; }
+    main .friends-block .owl-carousel .owl-item {
+      opacity: 0.5; }
+    main .friends-block .owl-carousel .owl-item.active {
+      opacity: 1; } }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   .navbar.navbar-index {

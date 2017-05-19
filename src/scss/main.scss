@@ -12,6 +12,54 @@ $line-height) {
     max-height: $line-height * $lines;
 }
 
+.menu-show {
+    transition: all 0.3s linear;
+}
+
+@-webkit-keyframes bounce-fade {
+    0% {
+        opacity: 0;
+        bottom: 100px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 60px;
+    }
+}
+
+@-moz-keyframes bounce-fade {
+    0% {
+        opacity: 0;
+        bottom: 100px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 60px;
+    }
+}
+
+@-o-keyframes bounce-fade {
+    0% {
+        opacity: 0;
+        bottom: 100px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 60px;
+    }
+}
+
+@keyframes bounce-fade {
+    0% {
+        opacity: 0;
+        bottom: 100px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 60px;
+    }
+}
+
 .select {
     position: relative;
     display: inline-block;
@@ -59,7 +107,7 @@ $line-height) {
 .select__arrow {
     position: absolute;
     top: 11px;
-    right: 13px;
+    right: 19px;
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
@@ -68,6 +116,8 @@ $line-height) {
     -moz-osx-font-smoothing: grayscale;
     &:before {
         content: '\f107';
+        font-size: 19px;
+        font-weight: 400;
     }
 }
 
@@ -104,6 +154,10 @@ body.not-index {
     padding-top: 113px;
 }
 
+.scrolled {
+    transition: all 0.3s linear;
+}
+
 .scrolled.navbar.navbar-index {
     box-shadow: 0 2px 4px 1px rgba(100, 100, 100, 0.15);
     background-color: #ffffff;
@@ -134,8 +188,8 @@ header {
         background-size: cover;
         background-image: url(../img/top-header-bg.png);
         padding-top: 240px;
-        padding-bottom: 456px;
         background-position: center center;
+        height: 100vh;
         &:before {
             content: '';
             position: absolute;
@@ -383,9 +437,12 @@ header {
         }
         a.scroll {
             position: absolute;
-            ;
             bottom: 35px;
             left: calc(50% - 11.5px);
+            -webkit-animation: bounce-fade 1.2s infinite;
+            -moz-animation: bounce-fade 1.2s infinite;
+            -o-animation: bounce-fade 1.2s infinite;
+            animation: bounce-fade 1.2s infinite;
         }
     }
 }
@@ -973,6 +1030,7 @@ main {
                         }
                         &:hover {
                             background-image: linear-gradient(180deg, #ffffff 0%, #f3f8fc 100%);
+                            text-decoration: none;
                         }
                     }
                     &:first-child {
@@ -1136,7 +1194,6 @@ main {
                         &:first-child {
                             td {
                                 padding-top: 12px;
-                                padding-bottom: 11px;
                             }
                         }
                         &:last-child {
@@ -1154,12 +1211,13 @@ main {
                         td {
                             padding-left: 21px;
                             line-height: 30px;
-                            color: black;
+                            color:  #1d1d1b ;
                             font-family: "Source Sans Pro";
                             font-size: 18px;
                             &:first-child {
                                 white-space: nowrap;
                                 letter-spacing: -0.43px;
+                                font-weight: 200;
                             }
                             &:last-child {
                                 font-weight: 600;
@@ -2043,49 +2101,49 @@ footer {
             width: 120px;
             height: 35px;
         }
-        ul.nav{
-            li.dropdown{
-                ul.dropdown-menu{
+        ul.nav {
+            li.dropdown {
+                ul.dropdown-menu {
                     background-image: none;
                     background-color: #fff;
-                    border:none;
-                    color:black;
-                    li{
-                        a{
-                           color: #1d1d1b;
-                    font-family: "Source Sans Pro";
-                    font-size: 16px;
-                    font-weight: 300;
-                    line-height: 52px; 
+                    border: none;
+                    color: black;
+                    li {
+                        a {
+                            color: #1d1d1b;
+                            font-family: "Source Sans Pro";
+                            font-size: 16px;
+                            font-weight: 300;
+                            line-height: 52px;
                         }
                     }
                 }
             }
-            li.my-account{
+            li.my-account {
                 margin-left: 0;
-                >a{
+                >a {
                     background-color: #fff;
-                    border:none;
+                    border: none;
                     box-shadow: none;
                     background-image: none;
                     color: black;
                 }
             }
-            li.open{
-                a{
+            li.open {
+                a {
                     background-image: none !important;
                     background-color: #fff;
-                    border:none;
+                    border: none;
                     color: black;
                     &:hover,
-                    &:focus{
+                    &:focus {
                         color: #1d1d1b;
                         background-color: white;
                     }
                 }
             }
-            li{
-                a{
+            li {
+                a {
                     color: #1d1d1b;
                     font-family: "Source Sans Pro";
                     font-size: 16px;
@@ -2118,9 +2176,9 @@ footer {
                 }
             }
         }
-        .navbar-toggle{
-            .icon-bar{
-               background-color: white !important;  
+        .navbar-toggle {
+            .icon-bar {
+                background-color: white !important;
             }
         }
     }
@@ -2163,6 +2221,7 @@ footer {
         .top-header {
             padding-top: 75px;
             padding-bottom: 28px;
+            height: auto;
             a.scroll {
                 display: none;
             }
@@ -2550,7 +2609,7 @@ footer {
                         a {
                             display: inline-block;
                             width: 100%;
-                            padding-left: 50px;
+                            padding-left: 11px;
                             div.text {
                                 float: none;
                                 vertical-align: middle;
@@ -2594,6 +2653,7 @@ footer {
                     padding: 0 15px;
                     margin: 0;
                     width: 100%;
+                    margin-top: 30px;
                 }
             }
         }
@@ -2601,8 +2661,21 @@ footer {
             padding: 0;
         }
         .search-block {
+            padding-bottom: 30px;
+            .dates-block {
+                .owl-carousel {
+                    margin-bottom: 27px;
+                    .owl-item {
+                        opacity: 0.5;
+                    }
+                    .owl-item.active {
+                        opacity: 1;
+                    }
+                }
+            }
             .pages-block {
                 padding-right: 15px;
+                text-align: center;
             }
             .dates-block {
                 text-align: center;
@@ -2628,6 +2701,11 @@ footer {
             .cheked-block {
                 max-width: 100%;
                 padding-top: 19px;
+                .main-title.line-up {
+                    &:after {
+                        content: "\f106";
+                    }
+                }
                 .main-title {
                     color: #1d1d1b;
                     font-family: Montserrat;
@@ -2707,16 +2785,31 @@ footer {
                 font-size: 25px;
                 line-height: 28px;
             }
+            .owl-item {
+                opacity: 0.5;
+            }
+            .owl-item.active {
+                opacity: 1;
+            }
         }
         .friends-block {
             .col-xs-12 {
                 padding: 0;
             }
             padding-top: 40px;
+            padding-bottom: 40px;
             h1 {
                 padding: 0 15px;
                 font-size: 25px;
                 line-height: 28px;
+            }
+            .owl-carousel {
+                .owl-item {
+                    opacity: 0.5;
+                }
+                .owl-item.active {
+                    opacity: 1;
+                }
             }
         }
     }
