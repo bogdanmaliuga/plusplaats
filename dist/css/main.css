@@ -521,6 +521,8 @@ header .top-header {
           background-color: transparent !important; }
           .navbar ul.nav li.dropdown ul.dropdown-menu li a:hover:after {
             display: none; }
+          .navbar ul.nav li.dropdown ul.dropdown-menu li a:hover:before {
+            visibility: hidden; }
     .navbar ul.nav li.my-account {
       margin-left: 20px; }
       .navbar ul.nav li.my-account > a {
@@ -739,6 +741,14 @@ main .friends-block {
         position: relative;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px; }
+      main .friends-block .owl-carousel .date-item:hover img {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-transition: -webkit-transform 0.5s ease;
+        -moz-transition: -moz-transform 0.5s ease;
+        transition: transform 0.5s ease; }
       main .friends-block .owl-carousel .date-item img {
         width: 100%;
         -webkit-transition: -webkit-transform 0.5s ease;
@@ -746,14 +756,6 @@ main .friends-block {
         transition: transform 0.5s ease;
         border-top-right-radius: 8px;
         border-top-left-radius: 8px; }
-        main .friends-block .owl-carousel .date-item img:hover {
-          -webkit-transform: scale(1.2);
-          -moz-transform: scale(1.2);
-          -o-transform: scale(1.2);
-          transform: scale(1.2);
-          -webkit-transition: -webkit-transform 0.5s ease;
-          -moz-transition: -moz-transform 0.5s ease;
-          transition: transform 0.5s ease; }
       main .friends-block .owl-carousel .date-item h3 {
         color: #1d1d1b;
         font-family: 'Montserrat';
@@ -1313,6 +1315,14 @@ main .user-block {
       position: relative;
       border-top-left-radius: 8px;
       border-top-right-radius: 8px; }
+    main .user-block .owl-carousel .date-item:hover img {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2);
+      -webkit-transition: -webkit-transform 0.5s ease;
+      -moz-transition: -moz-transform 0.5s ease;
+      transition: transform 0.5s ease; }
     main .user-block .owl-carousel .date-item img {
       width: 100%;
       -webkit-transition: -webkit-transform 0.5s ease;
@@ -1320,14 +1330,6 @@ main .user-block {
       transition: transform 0.5s ease;
       border-top-right-radius: 8px;
       border-top-left-radius: 8px; }
-      main .user-block .owl-carousel .date-item img:hover {
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        transform: scale(1.2);
-        -webkit-transition: -webkit-transform 0.5s ease;
-        -moz-transition: -moz-transform 0.5s ease;
-        transition: transform 0.5s ease; }
     main .user-block .owl-carousel .date-item h3 {
       color: #1d1d1b;
       font-family: 'Montserrat';
@@ -1503,7 +1505,8 @@ main .registeren-block {
         line-height: 40px;
         color: #1d1d1b;
         font-size: 18px;
-        font-weight: 400; }
+        font-weight: 400;
+        transition: all 0.5s linear; }
       main .registeren-block .social-block .social-item:after {
         content: '';
         position: absolute;
@@ -1518,11 +1521,14 @@ main .registeren-block {
         transition: all 0.5s linear; }
       main .registeren-block .social-block .social-item:hover {
         border: 1px solid #7a2c86;
-        background-image: linear-gradient(-45deg, #6a2683 0%, #93358b 100%); }
+        background-image: linear-gradient(-45deg, #6a2683 0%, #93358b 100%);
+        transition: all 0.5s linear; }
         main .registeren-block .social-block .social-item:hover .fa {
-          color: white; }
+          color: white;
+          transition: all 0.5s linear; }
         main .registeren-block .social-block .social-item:hover:after {
-          opacity: 1; }
+          opacity: 1;
+          transition: all 0.5s linear; }
 
 main .location-page {
   color: #1d1d1b;
@@ -1659,6 +1665,14 @@ main .search-block {
         position: relative;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px; }
+      main .search-block .dates-block .owl-carousel .date-item:hover img {
+        webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-transition: -webkit-transform 0.5s ease;
+        -moz-transition: -moz-transform 0.5s ease;
+        transition: transform 0.5s ease; }
       main .search-block .dates-block .owl-carousel .date-item img {
         width: 100%;
         -webkit-transition: -webkit-transform 0.5s ease;
@@ -1666,14 +1680,6 @@ main .search-block {
         transition: transform 0.5s ease;
         border-top-right-radius: 8px;
         border-top-left-radius: 8px; }
-        main .search-block .dates-block .owl-carousel .date-item img:hover {
-          -webkit-transform: scale(1.2);
-          -moz-transform: scale(1.2);
-          -o-transform: scale(1.2);
-          transform: scale(1.2);
-          -webkit-transition: -webkit-transform 0.5s ease;
-          -moz-transition: -moz-transform 0.5s ease;
-          transition: transform 0.5s ease; }
       main .search-block .dates-block .owl-carousel .date-item h3 {
         color: #1d1d1b;
         font-family: 'Montserrat';

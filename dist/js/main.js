@@ -32,7 +32,7 @@ jQuery(document).ready(function($) {
     });
      $(".scroll").click(function() {
         $('html, body').animate({
-            scrollTop: $("#scrollTo").offset().top - $(".navbar-fixed-top").height()-20
+            scrollTop: $("#scrollTo").offset().top - $(".navbar-fixed-top").height()-38
         }, 2000);
     });
      $(".lessLink").click(function() {
