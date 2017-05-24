@@ -2345,7 +2345,7 @@ footer {
 
 @media(max-width: 768px) {
     body.not-index {
-        padding-top: 61px;
+        padding-top: 56px;
     }
     .navbar-default {
         .navbar-toggle {
@@ -2428,6 +2428,10 @@ footer {
                             display: none;
                         }
                     }
+                    &:focus{
+                        color:#1d1d1b;
+                        font-weight: 200;
+                    }
                 }
             }
             li.open {
@@ -2440,6 +2444,10 @@ footer {
                     &:focus {
                         color: #1d1d1b;
                         background-color: white;
+                        font-weight: 600;
+                    }
+                    .fa-angle-down:before{
+                        content: "\f106";
                     }
                 }
             }
@@ -2940,6 +2948,7 @@ footer {
             }
         }
         .profile-info-block {
+            padding-bottom: 30px;
             .profile-buttons {
                 position: static;
                 width: 100%;
@@ -3093,6 +3102,7 @@ footer {
             }
         }
         .profile-block {
+            padding-bottom: 50px;
             h1 {
                 margin-top: 30px;
             }
@@ -3123,6 +3133,7 @@ footer {
                 padding: 0;
             }
             padding-top: 40px;
+            padding-bottom: 40px;
             h1 {
                 padding: 0 15px;
                 font-size: 25px;
