@@ -91,6 +91,9 @@
     font-weight: 400;
     color: #7f7f7e; }
 
+.select__arrow.down:before {
+  content: '\f106'; }
+
 .select select:hover ~ .select__arrow,
 .select select:focus ~ .select__arrow {
   border-top-color: #000; }
@@ -1812,6 +1815,8 @@ main .search-block {
         background-image: linear-gradient(135deg, #91c831 0%, #429321 100%); }
         main .search-block .dates-block .navigation ul li.current a {
           color: white; }
+      main .search-block .dates-block .navigation ul li.mobile-nav {
+        display: none; }
       main .search-block .dates-block .navigation ul li.last-page {
         border: 1px solid #ebebeb;
         background-color: #ebebeb; }
@@ -1866,7 +1871,7 @@ footer {
       line-height: 24px;
       font-weight: 200; }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body.not-index {
     padding-top: 56px; }
   .navbar-default .navbar-toggle {
@@ -2397,6 +2402,12 @@ footer {
         letter-spacing: 1px;
         line-height: 22px;
         text-transform: uppercase; }
+      main .search-block .dates-block .navigation ul li {
+        display: none; }
+      main .search-block .dates-block .navigation ul li.current {
+        display: block; }
+      main .search-block .dates-block .navigation ul li.mobile-nav {
+        display: block; }
     main .search-block .cheked-block {
       max-width: 100%;
       padding-top: 19px; }
@@ -2493,3 +2504,18 @@ footer {
   .footer-item {
     width: 50%;
     text-align: center; } }
+
+@media (min-width: 768px) {
+  .navbar .navbar-brand {
+    width: 208px;
+    height: 61px; }
+  main .profile-block .col-photo .img-container a img {
+    max-width: 100%; } }
+
+@media (max-width: 668px) {
+  .owl-carousel {
+    display: block; }
+  main .col-sm-9 {
+    padding: 15px; }
+  main .search-block .dates-block .owl-carousel .date-item {
+    margin-bottom: 15px; } }

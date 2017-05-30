@@ -142,7 +142,9 @@ jQuery(document).ready(function($) {
 
         }
     });
+    if ( $(window).width() > 667 ) {
     var owlSearch = $('#owl-search-1');
+
     owlSearch.owlCarousel({
         loop: true,
         margin: 38.25,
@@ -178,6 +180,7 @@ jQuery(document).ready(function($) {
         }
     });
     var owlSearch2 = $('#owl-search-2');
+
     owlSearch2.owlCarousel({
         loop: true,
         margin: 38.25,
@@ -212,7 +215,9 @@ jQuery(document).ready(function($) {
             }
         }
     });
+
     var owlSearch3 = $('#owl-search-3');
+    
     owlSearch3.owlCarousel({
         loop: true,
         margin: 38.25,
@@ -247,4 +252,5 @@ jQuery(document).ready(function($) {
             }
         }
     });
+    }
 });
