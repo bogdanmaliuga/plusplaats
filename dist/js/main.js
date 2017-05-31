@@ -30,14 +30,19 @@ jQuery(document).ready(function($) {
 
         }
     });
+    $(".dropdown").click(function(){
+
+    $('.fa-angle-down').toggleClass("down"); 
+});
      $(".scroll").click(function() {
         $('html, body').animate({
             scrollTop: $("#scrollTo").offset().top - $(".navbar-fixed-top").height()-38
         }, 2000);
     });
      $(".lessLink").click(function() {
+        
         $('html, body').animate({
-            scrollTop: $("#lessBlock").offset().top - $(".navbar-fixed-top").height()-85
+            scrollTop: $("#lessBlock").offset().top - $(".navbar-fixed-top").height()+$("#lessBlock").height()
         }, 2000);
     });
 
