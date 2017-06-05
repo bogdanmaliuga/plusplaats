@@ -2383,7 +2383,7 @@ footer {
   main .col-sm-9 {
     padding: 0; }
   main .search-block {
-    padding-bottom: 10px; }
+    padding-bottom: 12px; }
     main .search-block .dates-block .owl-carousel {
       margin-bottom: 27px; }
       main .search-block .dates-block .owl-carousel .owl-item {
@@ -2473,8 +2473,7 @@ footer {
       float: none;
       padding: 0; }
       main .profile-block .col-photo .col-photo-container {
-        position: static;
-        padding: 0 15px; }
+        position: static; }
         main .profile-block .col-photo .col-photo-container img {
           max-width: 100%;
           width: 100%; }
@@ -2530,11 +2529,17 @@ footer {
   .owl-carousel {
     display: block; }
   main .col-sm-9 {
-    padding: 15px; }
+    padding: 17px; }
   main .search-block .dates-block .owl-carousel .date-item {
     margin-bottom: 15px; } }
 
 @media (max-width: 1024px) {
+  main .col-sm-9 {
+    padding: 15px; }
+  main .friends-block .owl-carousel {
+    padding: 0 15px; }
+  main .photos-block .owl-carousel {
+    padding: 0 15px; }
   main .profile-block .col-photo .col-photo-container .row {
     margin: 0; }
   main .profile-info-block .profile-buttons {
@@ -2579,8 +2584,8 @@ footer {
   .navbar {
     padding: 7.5px 0; }
     .navbar .navbar-brand {
-      width: 120px;
-      height: 35px; }
+      width: 150px;
+      height: 44px; }
     .navbar .navbar-header {
       padding: 0 20px; }
     .navbar ul.nav {
@@ -2708,3 +2713,9 @@ footer {
       width: 22px;
       height: 4px;
       background-color: #1d1d1b !important; } }
+
+@media (max-width: 666px) {
+  main .photos-block .owl-carousel {
+    padding: 0; }
+  main .friends-block .owl-carousel {
+    padding: 0; } }
