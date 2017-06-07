@@ -2522,6 +2522,10 @@ footer {
       height: 44px;
       background-repeat: no-repeat;
       background-size: cover; }
+  .friends-block .owl-carousel {
+    padding: 0 15px; }
+  .photos-block .owl-carousel {
+    padding: 0 15px; }
   header .top-header .top-header-info h1 {
     margin-top: 61px; }
   header .top-header .top-header-info {
@@ -2548,10 +2552,6 @@ footer {
 @media (max-width: 1024px) {
   main .col-sm-9 {
     padding: 15px; }
-  main .friends-block .owl-carousel {
-    padding: 0 15px; }
-  main .photos-block .owl-carousel {
-    padding: 0 15px; }
   main .profile-block .col-photo .col-photo-container .row {
     margin: 0; }
   main .profile-info-block .profile-buttons {
