@@ -504,10 +504,11 @@ header .top-header {
         width: 24px;
         height: 25px;
         margin-left: 6px;
-        display: inline;
-        padding: 4px 4px;
+        display: inline-block;
+        /* padding: 4px 4px; */
+        text-align: center;
         top: -1em;
-        /* line-height: 0; */
+        line-height: 22.5px;
         color: #ffffff;
         font-family: "Source Sans Pro";
         font-size: 12px;
@@ -782,6 +783,11 @@ main .friends-block {
         font-weight: 700;
         margin-top: 24px;
         margin-bottom: 7px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* position: relative; */
+        padding: 0 15px;
         /* Text style for "(32)" */ }
         main .friends-block .owl-carousel .date-item h3 span {
           font-weight: 400; }
@@ -1356,7 +1362,12 @@ main .user-block {
       font-weight: 700;
       /* Text style for "(32)" */
       margin-top: 27px;
-      margin-bottom: 7px; }
+      margin-bottom: 7px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      /* position: relative; */
+      padding: 0 15px; }
       main .user-block .owl-carousel .date-item h3 span {
         font-weight: 400; }
     main .user-block .owl-carousel .date-item h3.online,
@@ -1617,13 +1628,21 @@ main .search-block {
           font-family: "Source Sans Pro";
           font-size: 16px;
           font-weight: 200;
-          line-height: 32px; }
+          line-height: 32px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 20%; }
         main .search-block .cheked-block ul.search-filter-item li label {
           color: #7f7f7e;
           font-family: "Source Sans Pro";
           font-size: 16px;
           font-weight: 200;
-          line-height: 32px; }
+          line-height: 32px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 80%; }
         main .search-block .cheked-block ul.search-filter-item li .styled-checkbox {
           position: absolute;
           opacity: 0; }
@@ -1707,6 +1726,11 @@ main .search-block {
         font-size: 21px;
         /* Text style for "Meriam" */
         font-weight: 700;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* position: relative; */
+        padding: 0 15px;
         /* Text style for "(32)" */ }
         main .search-block .dates-block .owl-carousel .date-item h3 span {
           font-weight: 400; }
